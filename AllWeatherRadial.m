@@ -11,8 +11,34 @@
 
 @implementation AllWeatherRadial
 
+- (id)initWithPressure:(float)newPressure 
+		 andTreadDepth:(float)newTreadDepth {
+	if (self = [super initWithPressure:newPressure 
+						 andTreadDepth:newTreadDepth]) {
+		rainHandling = 23.7;
+		snowHandling = 42.5;
+	}
+	return self;
+}
+
+- (void)setRainHandling:(float)newRainHandling {
+	rainHandling = newRainHandling;
+}
+
+- (float)rainHandling {
+	return rainHandling;
+}
+
+- (void)setSnowHandling:(float)newSnowHandling {
+	snowHandling = newSnowHandling;
+}
+
+- (float)snowHandling {
+	return snowHandling;
+}
+
 - (NSString *)description {
-	return @"I am a tire for rain or shine";
+	return [@"I am a tire for rain or shine" autorelease];
 }
 
 @end

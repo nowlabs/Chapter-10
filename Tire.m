@@ -5,9 +5,31 @@
 @implementation Tire
 
 - (id)init {
+	if (self = [self initWithPressure:34.0 
+						andTreadDepth:20.0]) {
+	}
+	return self;
+}
+
+- (id)initWithPressure:(float)newPressure {
+	if (self = [self initWithPressure:newPressure 
+						andTreadDepth:20.0]) {
+	}
+	return self;
+}
+
+- (id)initWithTreadDepth:(float)newTreadDepth {
+	if (self = [self initWithPressure:34.0 
+						andTreadDepth:newTreadDepth]) {
+	}
+	return self;
+}
+
+- (id)initWithPressure:(float)newPressure 
+		 andTreadDepth:(float)newTreadDepth {
 	if (self = [super init]) {
-		pressure = 34.0;
-		treadDepth = 20.0;
+		pressure = newPressure;
+		treadDepth = newTreadDepth;
 	}
 	return self;
 }

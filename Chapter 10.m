@@ -11,9 +11,8 @@ int main (int argc, const char * argv[]) {
 	Car *car = [[Car alloc] init];
 	int i;
 	for (i=0; i<4; i++) {
-		Tire *tire = [[Tire alloc] init];
-		[tire setPressure:23+i];
-		[tire setTreadDepth:33-i];
+		Tire *tire = [[Tire alloc] initWithPressure:23+i 
+									  andTreadDepth:33-i];
 		[car setTire:tire atIndex:i];
 		[tire release];
 	}

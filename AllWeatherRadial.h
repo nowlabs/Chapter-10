@@ -10,7 +10,15 @@
 #import "Tire.h"
 
 @interface AllWeatherRadial : Tire {
-
+	float rainHandling;
+	float snowHandling;
 }
+
+- (void)setRainHandling:(float)newRainHandling;
+- (float)rainHandling;
+
+- (void)setSnowHandling:(float)newSnowHandling;
+- (float)snowHandling;
+
 
 @end
